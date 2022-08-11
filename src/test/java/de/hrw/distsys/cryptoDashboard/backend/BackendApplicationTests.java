@@ -1,10 +1,10 @@
-package com.example.herokuTest;
+package de.hrw.distsys.cryptoDashboard.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HerokuTestApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
