@@ -2,8 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const host = window.location.host;
+
     let currentPricesRequest = new XMLHttpRequest();
-    currentPricesRequest.open('GET', "http://localhost:8080/market_prices/current");
+    currentPricesRequest.open('GET', "https://" + host + "/market_prices/current");
     currentPricesRequest.responseType = 'json';
     currentPricesRequest.send();
 
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createChart() {
         let historicalPricesRequest = new XMLHttpRequest();
-        historicalPricesRequest.open('GET', "http://localhost:8080/market_prices/historical?coins=bitcoin%2Cethereum%2Cwaves&period_in_days=" + periodSelector.value);
+        historicalPricesRequest.open('GET', "https://" + host + "/market_prices/historical?coins=bitcoin%2Cethereum%2Cwaves&period_in_days=" + periodSelector.value);
         historicalPricesRequest.responseType = 'json';
         historicalPricesRequest.send();
 
