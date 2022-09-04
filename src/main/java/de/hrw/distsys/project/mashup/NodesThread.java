@@ -73,9 +73,9 @@ public class NodesThread {
 
                     while (true) {
                         try {
-                            allNodes = objectMapper.readValue(new URL("https://waves-node.tokenomica.com/peers/all"), JSONObject.class);
+                            //allNodes = objectMapper.readValue(new URL("https://waves-node.tokenomica.com/peers/all"), JSONObject.class);
                             activeNodes = objectMapper.readValue(new URL("https://waves-node.tokenomica.com/peers/connected"), JSONObject.class);
-                            wavesService.setAllNodes(mergeNodeInfos(allNodes));
+                            //wavesService.setAllNodes(mergeNodeInfos(allNodes));
                             wavesService.setActiveNodes(mergeNodeInfos(activeNodes));
                         } catch (MalformedURLException mue) {
                             System.err.println("URL has wrong format!");
