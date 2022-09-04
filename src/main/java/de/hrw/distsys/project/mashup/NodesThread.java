@@ -23,7 +23,7 @@ public class NodesThread {
     private final HashMap<String, JSONObject> nodesLocationsMap = new HashMap<>();
 
     private final String[] keys = {
-            "cca0e56a4b2a486c9145f487a91e82cb",
+            "af9eb05fa8094aef9f8c057e76095505",
             "865c80dd04644d618fa6ef2b6411f44c",
             "5173f0fda99a4e85bd8de1d38904b78d",
             "7675770824c747b0809f65a2cac2bda1",
