@@ -23,16 +23,16 @@ public class NodesThread {
     private final HashMap<String, JSONObject> nodesLocationsMap = new HashMap<>();
 
     private final String[] keys = {
-            "af9eb05fa8094aef9f8c057e76095505",
+            "0e8532b25b10438cb79a96fc521b3c21",
             "865c80dd04644d618fa6ef2b6411f44c",
             "5173f0fda99a4e85bd8de1d38904b78d",
             "7675770824c747b0809f65a2cac2bda1",
             "b3b32cefc31a4ddfa11379e02eb7b88c",
-            "ea73d4247ec54dc99a2a54dbfb250555"
+            "c3bae47657dd4ebfbac0257f03ab2263"
     };
 
-    //c3bae47657dd4ebfbac0257f03ab2263
-    //a18f449f50f443e987fbc57ca8856a53
+    //ea73d4247ec54dc99a2a54dbfb250555//
+    //a18f449f50f443e987fbc57ca8856a53 //
     private int keyCounter = 0;
     private String currentKey = keys[keyCounter];
     private int requestCounter = 0;
@@ -51,18 +51,16 @@ public class NodesThread {
             public void run() {
                 try {
 
-                    //https://api.ipgeolocation.io/ipgeo?apiKey=d1d8c915b7664371a2ac9fda5edbd80c&ip=13.209.60.161&fields=latitude%2Clongitude
-
                     JSONObject activeNodes;
                     JSONObject allNodes;
 
                     LinkedHashMap<String, String> mainNode = new LinkedHashMap<>();
-                    mainNode.put("address", "/212.95.36.100:6868");
-                    mainNode.put("declaredAddress", "/78.159.101.3:6868");
-                    mainNode.put("peerName", "waves-node.tokenomica.com");
-                    mainNode.put("peerNonce", "217221");
+                    mainNode.put("address", "/195.201.28.113:6868");
+                    mainNode.put("declaredAddress", "/---");
+                    mainNode.put("peerName", "nodes.wavesnodes.com");
+                    mainNode.put("peerNonce", "---");
                     mainNode.put("applicationName", "wavesW");
-                    mainNode.put("applicationVersion", "1.3.6");
+                    mainNode.put("applicationVersion", "---");
 
                     JSONObject jo = new JSONObject();
                     List<LinkedHashMap<String, String>> list = new ArrayList<>();
@@ -73,9 +71,9 @@ public class NodesThread {
 
                     while (true) {
                         try {
-                            //allNodes = objectMapper.readValue(new URL("https://waves-node.tokenomica.com/peers/all"), JSONObject.class);
+                            allNodes = objectMapper.readValue(new URL("https://nodes.wavesnodes.com/peers/all"), JSONObject.class);
                             activeNodes = objectMapper.readValue(new URL("https://nodes.wavesnodes.com/peers/connected"), JSONObject.class);
-                            //wavesService.setAllNodes(mergeNodeInfos(allNodes));
+                            wavesService.setAllNodes(mergeNodeInfos(allNodes));
                             wavesService.setActiveNodes(mergeNodeInfos(activeNodes));
                         } catch (MalformedURLException mue) {
                             System.err.println("URL has wrong format!");
