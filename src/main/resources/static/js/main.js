@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 lng: longitude
             },
             map: map,
-            icon: "http://maps.google.com/mapfiles/kml/paddle/red-stars.png"
+            icon: "https://maps.google.com/mapfiles/kml/paddle/red-stars.png"
         });
 
         let list = document.createElement("ul")
