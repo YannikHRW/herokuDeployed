@@ -1,11 +1,10 @@
-package de.hrw.distsys.cryptoDashboard.backend;
+package de.hrw.distsys.project.mashup;
 
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 
 public class FunctionalTest {
 
-    //Wird nicht ausgeführt?!
     @BeforeClass
     public static void setup() {
         String port = System.getProperty("server.port");
@@ -18,7 +17,7 @@ public class FunctionalTest {
 
         String basePath = System.getProperty("server.base");
         if(basePath == null){
-            basePath = "/market_prices/";
+            basePath = "/get_nodes/";
         }
         RestAssured.basePath = basePath;
 
@@ -27,6 +26,7 @@ public class FunctionalTest {
             baseHost = "http://localhost";
         }
         RestAssured.baseURI = baseHost;
+        System.out.println("hallo");
 
     }
 

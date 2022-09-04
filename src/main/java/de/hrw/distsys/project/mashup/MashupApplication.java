@@ -1,13 +1,13 @@
-package de.hrw.distsys.cryptoDashboard.backend;
+package de.hrw.distsys.project.mashup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendApplication {
+public class MashupApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
+		SpringApplication.run(MashupApplication.class, args);
 	}
 
 }
