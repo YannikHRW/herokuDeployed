@@ -3,76 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Waves Node Map</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
-    <div class="container">
+<body style="margin: 0">
 
-        <header>
-            <div class="row">
-                <div class="col-6">
-                    <h1>Waves Nodes</h1>
-                </div>
-            </div>
-        </header>
+    <section id="map">
+        <div id="googleMap" style="width:100%;height:100vh;"></div>
+    </section>
 
-        <section id="map">
-            <div id="googleMap" style="width:100%;height:800px;"></div>
-        </section>
-
-
-
-        <!--<section id="current-prices">
-            <div class="row">
-                <div class="col-2">
-                    <div class="price-inner">
-                        <p><span id="ethereum-price">999</span>€</p>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="price-inner">
-                        <p><span id="bitcoin-price">999</span>€</p>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="price-inner">
-                        <p><span id="waves-price">999</span>€</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <main>
-            <div class="row">
-                <div class="col-6">
-                    <label for="period-select">Select Time period</label>
-                    <select id="period-select" name="period-select">
-                        <option value="1" selected>1 Day</option>
-                        <option value="7">1 Week</option>
-                        <option value="31">1 Month</option>
-                        <option value="93">3 Month</option>
-                        <option value="186">6 Month</option>
-                        <option value="365">1 Year</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div>
-                        <canvas id="pricesChart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div>
-                        <canvas id="relationChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </main>-->
-
-    </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDzbpgs3cJnmxUL57YyJjt-tpx68ff5i0&callback=myMap"></script>
 

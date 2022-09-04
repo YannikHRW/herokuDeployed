@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var mapProp = {
         //center:new google.maps.LatLng(51.508742,-0.120850),
         center: new google.maps.LatLng(50.09671, 8.62957),
-        zoom: 2,
+        zoom: 3,
     };
 
     var marker;
