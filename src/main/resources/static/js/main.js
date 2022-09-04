@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
     let mainNodeRequest = new XMLHttpRequest();
-    mainNodeRequest.open('GET', "http://" + host + "/get_nodes/main");
+    mainNodeRequest.open('GET', "https://" + host + "/get_nodes/main");
     mainNodeRequest.responseType = 'json';
     mainNodeRequest.send();
 
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let allPeersList = [];
 
     let allNodesRequest = new XMLHttpRequest();
-    allNodesRequest.open('GET', "http://" + host + "/get_nodes/all");
+    allNodesRequest.open('GET', "https://" + host + "/get_nodes/all");
     allNodesRequest.responseType = 'json';
     allNodesRequest.send();
 
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let peersList = [];
 
     let activeNodeRequest = new XMLHttpRequest();
-    activeNodeRequest.open('GET', "http://" + host + "/get_nodes/active");
+    activeNodeRequest.open('GET', "https://" + host + "/get_nodes/active");
     activeNodeRequest.responseType = 'json';
     activeNodeRequest.send();
 
